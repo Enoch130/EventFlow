@@ -12,7 +12,7 @@ class FileService:
     """
 
     @staticmethod
-    def upload(file, folder: str = "fastapi_uploads") -> dict:
+    def upload(file, folder: str = "fastapi_uploads", resource_type: str = "auto") -> dict:
         """
         Upload a file to Cloudinary.
         
@@ -27,7 +27,7 @@ class FileService:
         result = cloudinary.uploader.upload(
             file,
             folder=folder,
-            resource_type="image"  # force only images
+            resource_type=resource_type  # force only images
         )
         
         return {
