@@ -8,7 +8,7 @@ router = APIRouter()
 def custom_swagger_ui():
     return get_swagger_ui_html(
         openapi_url="/openapi.json",
-        title="KEEYO API",
+        title="EVENTFLOW API",
     )
 
 
@@ -16,5 +16,5 @@ def custom_swagger_ui():
 def custom_redoc():
     return get_redoc_html(
         openapi_url="/openapi.json",
-        title="KEEYO REDOC"
+        title="EVENTFLOW REDOC"
     )

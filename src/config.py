@@ -27,9 +27,9 @@ class Settings(BaseSettings):
     #SMTP_SERVER: str
     #SMTP_PORT:int
     #OTP_EXPIRY_MINUTES:int
-    #CLOUD_NAME:str
-    #CLOUD_API_KEY:str
-    #CLOUD_API_SECRET:str
+    CLOUD_NAME:str
+    CLOUD_API_KEY:str
+    CLOUD_API_SECRET:str
 
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")

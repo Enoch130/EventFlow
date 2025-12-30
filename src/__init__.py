@@ -8,7 +8,7 @@ from src.shared import override_docs
 from contextlib import asynccontextmanager
 from src.db.session import init_db
 import os
-# from src.shared.services.cloudinary.file_router import irouter
+from src.shared.services.cloudinary.file_router import mediaApp
 
 
 # Dynamically get the GeoIP DB path based on the current file location
@@ -62,6 +62,7 @@ app.add_middleware(SuccessResponseWrapperMiddleware)
 # Routers
 # ========================
 app.include_router(router=override_docs.router, prefix="/bapi")
+app.include_router(router=mediaApp)
 
 
 
