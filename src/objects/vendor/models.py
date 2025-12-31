@@ -3,7 +3,7 @@ from src.models.base import UUIDModel, TimestampedModel
 from sqlalchemy.dialects.postgresql import UUID as pgUUID
 from sqlalchemy.orm import Mapped, mapped_column
 
-class User(UUIDModel, TimestampedModel):
+class Vendors(UUIDModel, TimestampedModel):
     name:Mapped[str] = mapped_column(String)
     category:Mapped[str] = mapped_column(String)
     status:Mapped[str] = mapped_column(String)
