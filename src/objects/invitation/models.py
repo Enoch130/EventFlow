@@ -3,5 +3,5 @@ from src.models.base import UUIDModel, TimestampedModel
 from sqlalchemy.dialects.postgresql import UUID as pgUUID
 from sqlalchemy.orm import Mapped, mapped_column
 
-class User(UUIDModel, TimestampedModel):
+class Invitation(UUIDModel, TimestampedModel):
     invitationLink:Mapped[str] = mapped_column(String)
